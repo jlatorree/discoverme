@@ -1,0 +1,32 @@
+{
+  "name": "benchme",
+  "owner": {
+    "name": "jlatorree",
+    "url": "https://github.com/jlatorree"
+  },
+  "description": "benchme: benchmarks estratégicos co-creados, para decidir qué igualar y de qué diferenciarse.",
+  "plugins": [
+    {
+      "name": "benchme",
+      "source": "./",
+      "description": "Benchmark estratégico co-creado: ubica un producto o servicio frente a sus alternativas reales y decide qué igualar, de qué diferenciarse, qué vigilar y qué ignorar. Produce un informe madre con evidencia fechada y, a pedido, una versión ejecutiva y presentaciones HTML vía frontend-slides. Se integra con brainme.",
+      "author": {
+        "name": "jlatorree",
+        "url": "https://github.com/jlatorree"
+      },
+      "homepage": "https://github.com/jlatorree/benchme",
+      "repository": "https://github.com/jlatorree/benchme",
+      "keywords": [
+        "benchmark",
+        "competitive-analysis",
+        "strategy",
+        "positioning",
+        "strategic-design",
+        "obsidian",
+        "brainme"
+      ],
+      "category": "productivity",
+      "version": "0.1.0"
+    }
+  ]
+}
