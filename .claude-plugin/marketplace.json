@@ -1,32 +1,34 @@
 {
-  "name": "benchme",
+  "name": "discoverme",
   "owner": {
     "name": "jlatorree",
     "url": "https://github.com/jlatorree"
   },
-  "description": "benchme: benchmarks estratégicos co-creados, para decidir qué igualar y de qué diferenciarse.",
+  "description": "discoverme: benchmarks estratégicos y revisiones de literatura, con un motor de research compartido.",
   "plugins": [
     {
-      "name": "benchme",
+      "name": "discoverme",
       "source": "./",
-      "description": "Benchmark estratégico co-creado: ubica un producto o servicio frente a sus alternativas reales y decide qué igualar, de qué diferenciarse, qué vigilar y qué ignorar. Produce un informe madre con evidencia fechada y, a pedido, una versión ejecutiva y presentaciones HTML vía frontend-slides. Se integra con brainme.",
+      "description": "Research estratégico co-creado, con un motor de evidencia compartido. benchme: benchmarks que deciden qué igualar, de qué diferenciarse, qué vigilar y qué ignorar. doime: revisiones de literatura académica con papers verificados y doble cita. Solo acceso público, sin login. Se integra con brainme.",
       "author": {
         "name": "jlatorree",
         "url": "https://github.com/jlatorree"
       },
-      "homepage": "https://github.com/jlatorree/benchme",
-      "repository": "https://github.com/jlatorree/benchme",
+      "homepage": "https://github.com/jlatorree/discoverme",
+      "repository": "https://github.com/jlatorree/discoverme",
       "keywords": [
+        "research",
         "benchmark",
         "competitive-analysis",
+        "literature-review",
+        "academic-papers",
         "strategy",
-        "positioning",
         "strategic-design",
         "obsidian",
         "brainme"
       ],
       "category": "productivity",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }

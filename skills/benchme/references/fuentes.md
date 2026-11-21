@@ -36,6 +36,7 @@
 | Trendslop: sesgo de la IA hacia la estrategia de moda | Esade, 2026-06 | [Forbes](https://www.forbes.com/sites/esade/2026/06/17/beware-trendslop-when-ai-is-making-your-strategy-mediocre/) |
 | Escala de probabilidad | ICD 203 | [DNI](https://www.dni.gov/files/documents/ICD/ICD-203.pdf) |
 | Hipótesis en competencia | Heuer, 1999 | [CIA](https://www.cia.gov/resources/csi/static/Pyschology-of-Intelligence-Analysis.pdf) |
+| Diseño idealizado (base de los primeros principios) | Ackoff, 1993 | [Arthur D. Little](https://www.adlittle.com/sites/default/files/prism/1993_q4_26-32.pdf) |
 | Puntos de palanca | Meadows | [Donella Meadows Project](https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/) |
 | Tres horizontes | Sharpe et al., 2016 | [Dundee](https://discovery.dundee.ac.uk/ws/files/9835190/ES_2016_8388.pdf) |
 | Transition design en la práctica | Miller, 2026 | [The Design Journal](https://www.tandfonline.com/doi/full/10.1080/14606925.2025.2597448) |

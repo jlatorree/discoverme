@@ -7,4 +7,4 @@
 - **Línea de tiempo**: primer pensamiento, búsqueda pasiva, evento, búsqueda activa, evento, decisión, uso. El primer pensamiento ocurre antes de lo que la gente recuerda.
 - **Por alternativa**: qué job atiende, qué tan bien, y qué ansiedad y qué hábito la protegen.
 
-La evidencia sale de entrevistas de cambio (`../evidencia.md`, primera mano), no de encuestas.
+La evidencia sale de entrevistas de cambio (`../../../../motor/evidencia.md`, primera mano), no de encuestas.

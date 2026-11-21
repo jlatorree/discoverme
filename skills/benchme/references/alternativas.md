@@ -2,6 +2,8 @@
 
 La pregunta raíz: **si nuestra oferta no existiera, ¿qué haría el cliente?** La competencia que cuenta es la que el cliente considera, no la que el equipo imagina.
 
+Este paso es la pasada liviana del embudo (`../../../motor/captura-web.md`): búsqueda y una página por candidato, lo justo para proponer el set. La investigación profunda empieza en el paso 3, solo con lo que el usuario apruebe.
+
 ## Roles
 
 Cada alternativa entra con un rol y un motivo:
@@ -27,4 +29,6 @@ Decide con la evidencia del cliente: listas cortas reales, tratos ganados y perd
 
 ## Propón y deja elegir
 
-Presenta el set como tabla: alternativa · rol · motivo · de dónde sale el dato. El usuario aprueba, quita o agrega. Las exclusiones quedan registradas con su motivo.
+Cada candidato, incluido o excluido, lleva un argumento: qué evidencia muestra que el cliente lo considera (o no), qué rol cumple, por qué ese rol, y qué tan sólida es esa evidencia. Un motivo sin evidencia queda marcado como supuesto.
+
+Presenta el set como tabla: alternativa · rol · argumento · evidencia y su fuente · confianza. El usuario aprueba, quita o agrega, y sus cambios también quedan con su argumento.
