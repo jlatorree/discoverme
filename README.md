@@ -51,13 +51,17 @@ Busca primero en APIs académicas abiertas (Crossref, OpenAlex, arXiv, Europe PM
 
 ## El motor
 
-`motor/` es la fuente única que comparten los skills: reglas de evidencia, captura web, fuentes académicas, cómo se orquesta el deep research y dónde se guarda. Los agentes:
+`motor/` es la fuente única que comparten los skills: reglas de evidencia, captura web, fuentes académicas, cómo se orquesta el deep research y dónde se guarda.
+
+Tú conversas con la sesión: encuadras, apruebas y decides. La investigación la lleva un solo agente de principio a fin, así quien redacta el informe vio todo lo investigado:
 
 | Agente | Rol | Modelo |
 |---|---|---|
-| `investigador` | Busca y lee una subpregunta | Opus, esfuerzo alto |
+| `investigador` | Planifica, reparte, verifica, sintetiza y redacta. Se detiene en cada punto de control para que decidas, y sigue con tu respuesta | Opus, esfuerzo xhigh (Extra) |
+| `buscador` | Busca y lee una subpregunta | Opus, esfuerzo alto |
 | `lector` | Lee un documento largo | Opus, esfuerzo alto |
-| `redactor` | Sintetiza y redacta el informe | Opus, esfuerzo xhigh |
+
+Los agentes trabajan con su propio modelo y esfuerzo, aunque tu sesión esté en otro nivel.
 
 ## Acceso sin login
 
@@ -73,7 +77,7 @@ Funciona con la búsqueda y la lectura web de Claude. Con muchas fuentes rinde m
 
 ## Dónde guarda
 
-- **Con [brainme](https://github.com/jlatorree/brainme):** en sus carpetas y con sus plantillas; los entregables en `05_exports/`, el conocimiento en `01_knowledge/`, las fichas de papers en `04_sources/literature/`.
+- **Con [brainme](https://github.com/jlatorree/brainme):** sigue el método vigente de brainme: sus carpetas, sus plantillas y su criterio de qué vale guardar.
 - **Sin brainme:** `benchmarks/<tema>/` y `literatura/`.
 
 En ambos casos, a la vista queda solo la versión vigente y las anteriores en `versiones/`.

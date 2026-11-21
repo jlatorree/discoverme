@@ -9,34 +9,27 @@ Cada encargo tiene un `<tema>` corto, en minúsculas y con guiones (`seguro-vehi
 
 ## Con brainme
 
-brainme decide dónde vive cada cosa y discoverme se acomoda a sus carpetas. Para fichas, frontmatter, wikilinks y el orden de versiones manda brainme (su `references/entregables.md`). Al terminar, invoca brainme para registrar los entregables y sincronizar.
+brainme es la fuente de verdad de su método: qué vale guardar, en qué carpeta, con qué plantilla, cómo se marca lo que se sabe y cómo se versiona. discoverme lo sigue tal como esté vigente.
 
-Las plantillas de fichas son las de brainme, en la carpeta `templates/` de su plugin: `literature-note.md` para papers y `web-source.md` para fuentes web no académicas. Encuéntralas con `find ~/.claude/plugins -path '*brainme*/templates/literature-note.md'`.
+1. **Al empezar el encargo**, invoca brainme: te pone al día del proyecto y carga su método. Anota su carpeta (la que muestra al cargarse): ahí están `references/` y `templates/`.
+2. **Antes de guardar**, aplica su criterio de qué vale guardar y sus reglas de entregables (`references/entregables.md`). Las capturas web y los papers son originales: las notas guardan lo que se dedujo de ellos y apuntan a ellos.
+3. **Al lanzar un investigador**, pásale la carpeta de brainme y las rutas donde guarda cada cosa.
+4. **Al terminar**, invoca brainme para registrar los entregables y sincronizar.
 
-### benchme
+Lo que produce discoverme, según los tipos de nota de brainme:
 
-| Qué | Dónde |
-|---|---|
-| Informe madre | `05_exports/reports/benchmark-<tema>/benchmark-<tema>-vN.md` |
-| Ejecutiva | `05_exports/reports/benchmark-<tema>-ejecutiva/benchmark-<tema>-ejecutiva-vN.md` |
-| Presentación completa | `05_exports/presentations/benchmark-<tema>-deck/benchmark-<tema>-deck-vN.html` + ficha |
-| Presentación ejecutiva | `05_exports/presentations/benchmark-<tema>-deck-ejecutivo/benchmark-<tema>-deck-ejecutivo-vN.html` + ficha |
-| Brief, evidencia y vigilancia | `01_knowledge/benchmark-<tema>-brief.md`, `…-evidencia.md`, `…-vigilancia.md` |
-| Perfil de cada alternativa | `01_knowledge/<alternativa>.md`; si ya existe de otro benchmark, actualízalo |
-| Posturas decididas | `02_decisions/benchmark-<tema>-posturas.md`, con el porqué y lo descartado |
-| Vacíos | `03_open_questions/`, una pregunta por archivo |
+| Qué | Tipo en brainme | Nombre |
+|---|---|---|
+| Informe madre, ejecutiva, presentaciones | entregable | `benchmark-<tema>`, `benchmark-<tema>-ejecutiva`, `benchmark-<tema>-deck`, `benchmark-<tema>-deck-ejecutivo` |
+| Informe de literatura | entregable | `literatura-<tema>` |
+| Brief, registro de evidencia, vigilancia | conocimiento | `benchmark-<tema>-brief`, `…-evidencia`, `…-vigilancia` |
+| Perfil de cada alternativa | conocimiento; si ya existe, se actualiza | `<alternativa>` |
+| Posturas decididas, con el porqué y lo descartado | decisión | `benchmark-<tema>-posturas` |
+| Vacíos, y contradicciones con una decisión vigente | pregunta abierta, una por archivo | — |
+| Paper | fuente de literatura, con `literature-note.md`; si ya existe, se amplía | `apellido-anio-palabra-clave` |
+| Fuente web no académica que sustenta algo clave | fuente web, con `web-source.md` | `sitio-tema` |
 
-### doime
-
-| Qué | Dónde |
-|---|---|
-| Ficha de cada paper | `04_sources/literature/apellido-anio-palabra-clave.md`, con `literature-note.md`; si ya existe, se amplía |
-| PDF que aporte el usuario | junto a su ficha, con el mismo nombre base |
-| Fuente web no académica | `04_sources/web/sitio-tema.md`, con `web-source.md` |
-| Informe | `05_exports/reports/literatura-<tema>/literatura-<tema>-vN.md` |
-| Vacíos o contradicciones con una decisión | `03_open_questions/`, una pregunta por archivo |
-
-Los entregables enlazan con wikilinks lo que los sustenta: brief, perfiles, fichas, decisiones.
+Los entregables enlazan con wikilinks lo que los sustenta.
 
 ## Sin brainme
 
@@ -58,13 +51,16 @@ literatura/                                doime
     informe/          literatura-<tema>-vN.md + versiones/
 ```
 
-Sin brainme, la ficha sigue `../skills/doime/references/ficha.md`.
+La ficha de cada paper sigue `../skills/doime/references/ficha.md`.
 
-## Versiones (ambos modos)
+Versiones:
 
 - Una versión nueva es un archivo nuevo con el número siguiente (`-v2`).
 - A la vista queda solo la versión vigente; las anteriores pasan a `versiones/` de su carpeta.
 - El conocimiento canónico y las fichas se actualizan en su lugar; la historia queda en el registro de cambios del informe.
-- Cada derivado declara al inicio de qué versión del informe sale. Al salir un informe nuevo, avisa qué derivados quedaron desactualizados.
+
+## Derivados (ambos modos)
+
+Cada derivado declara al inicio de qué versión del informe sale. Al salir un informe nuevo, avisa qué derivados quedaron desactualizados.
 
 **Terminado cuando:** cada archivo está en su lugar, solo la versión vigente está a la vista y, con brainme, brainme sincronizó.

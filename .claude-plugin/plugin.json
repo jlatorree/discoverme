@@ -1,6 +1,6 @@
 {
   "name": "discoverme",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Research estratégico co-creado, con un motor de evidencia compartido. benchme: benchmarks que deciden qué igualar, de qué diferenciarse, qué vigilar y qué ignorar. doime: revisiones de literatura académica con papers verificados y doble cita. Solo acceso público, sin login. Se integra con brainme.",
   "author": {
     "name": "Jonathan Latorre",

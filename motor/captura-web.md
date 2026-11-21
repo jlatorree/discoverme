@@ -14,12 +14,11 @@ Rastrear todo a fondo antes de preseleccionar genera volumen sin decisión. En b
 
 ## Antes de la pasada profunda
 
-Revisa qué hay disponible y díselo al usuario en una línea:
+Lo hace la sesión, que habla con el usuario. Revisa qué hay disponible y díselo en una línea:
 
 - Crawl4AI: `command -v crwl`
 - Agent Reach: `command -v agent-reach`
 - Playwright: herramientas `mcp__playwright__*` en la sesión
-- frontend-design: el skill está en la lista de skills
 
 Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuario. Sin ellas, el trabajo sigue con la búsqueda y la lectura web propias de Claude.
 
@@ -53,7 +52,7 @@ params:
 ]}
 ```
 
-Con muchas páginas, el subagente ahorra contexto: Crawl4AI no gasta tokens al rastrear, el `lector` lee los markdown, y tú verificas al menos un dato por fuente contra el original.
+Con muchas páginas, Crawl4AI no gasta tokens al rastrear, un `lector` lee los markdown, y tú verificas al menos un dato por fuente contra el original.
 
 ## Copias de respaldo
 
@@ -72,5 +71,4 @@ Pide el sí del usuario antes de cada una.
 - **Crawl4AI** (requiere `uv`): `uv tool install crawl4ai --python 3.12 && crawl4ai-setup`. Descarga un navegador. Con `CRAWL4AI_NO_CLOUD_NOTICE=1` se oculta su aviso de la nube.
 - **Agent Reach** (requiere `uv`): `uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip && agent-reach setup`. El paquete de PyPI con el mismo nombre es otro proyecto. Agrega solo canales sin login.
 - **Playwright** (requiere Node): `claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --isolated`. Con `--isolated` no guarda sesiones. Hay que reiniciar la sesión.
-- **frontend-design**: `claude plugin install frontend-design@claude-plugins-official`.
 - Si falta `uv`: `brew install uv`.

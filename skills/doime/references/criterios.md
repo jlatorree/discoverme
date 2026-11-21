@@ -1,6 +1,6 @@
 # Criterios de fuentes
 
-Van completos en cada encargo de búsqueda, incluidos los de los `investigador`.
+Van completos en cada encargo de búsqueda, incluido el de cada `buscador`.
 
 ## Qué entra
 
@@ -8,7 +8,7 @@ Van completos en cada encargo de búsqueda, incluidos los de los `investigador`.
 - Fuente primaria: el paper que hizo el estudio, no quien lo resume.
 - Lo más citado y lo más reciente (unos 5 años), más los clásicos clave, marcados como fundacionales.
 - Evidencia en contra o debates, si existen.
-- Sin revistas depredadoras ni trabajos retractados.
+- Trabajos vigentes en revistas legítimas: los retractados y los de revistas depredadoras quedan fuera (cómo detectarlos: `../../../motor/fuentes-academicas.md`).
 
 ## Qué se anota de cada paper
 

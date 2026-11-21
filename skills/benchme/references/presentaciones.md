@@ -23,12 +23,11 @@ Pásale estas respuestas para que no las vuelva a preguntar:
 - **Reglas del benchmark**, con cualquier estilo:
   - La primera diapositiva de contenido es el mensaje principal.
   - Las posturas y las etiquetas de evidencia se conservan, con un color neutro y distinto por postura.
-  - Las diferencias se presentan como opciones; los semáforos y el rojo para brechas quedan fuera.
-  - El deck compara posturas: sin ranking ni ganador.
+  - Las diferencias se presentan como opciones, y el deck compara posturas.
   - Las fuentes van en las notas o en una diapositiva final.
 
 ## 3. Guarda
 
 Guarda según `../../../motor/guardado.md`, con la versión del informe de origen en la ficha o al inicio del archivo.
 
-frontend-slides produce decks 16:9. Si el usuario quiere el informe completo como página web con scroll, invoca el skill **frontend-design** con el informe vigente, el mismo design.md o estilo, y las mismas reglas del benchmark.
+frontend-slides produce decks 16:9. Si el usuario quiere el informe completo como página web con scroll, invoca el skill **frontend-design** con el informe vigente, el mismo design.md o estilo, y las mismas reglas del benchmark. Si frontend-design no está en la lista de skills, ofrece instalarlo con `claude plugin install frontend-design@claude-plugins-official`.
