@@ -19,7 +19,7 @@ El investigador no habla con el usuario. Todo lo que requiere al usuario (una de
 
 ## Memoria en disco
 
-El investigador guarda en el disco, a medida que avanza, todo lo que verifica o deduce: registro de evidencia, fichas, perfiles y borradores, según `guardado.md`. Si el investigador ya no está (otra sesión, una reanudación que falla), la sesión lanza uno nuevo con las rutas, y retoma desde ahí.
+Cada nota tiene un solo escritor: los `buscador` y los `lector` devuelven su trabajo, y el investigador escribe. La sesión escribe solo el brief. El investigador guarda en el disco, a medida que avanza, todo lo que verifica o deduce: registro de evidencia, fichas, perfiles y borradores, según `guardado.md`. Si el investigador ya no está (otra sesión, una reanudación que falla), la sesión lanza uno nuevo con las rutas, y retoma desde ahí.
 
 ## Procedimiento del investigador
 

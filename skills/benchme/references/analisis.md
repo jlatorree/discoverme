@@ -25,6 +25,7 @@ Escribe un **perfil** por alternativa en profundidad. El perfil es conocimiento 
    Cierra con tres columnas: efecto en la disposición a pagar, efecto en el costo y defendibilidad.
 5. **Supuestos de su dirección.** Lista las pistas (contradicciones entre lo que dice y lo que hace, su historia, dónde invierte) y pregunta al usuario qué supuestos explican su conducta y qué hará después. Esta inferencia es del usuario; si no la tiene, queda abierta en el informe.
 6. **Qué retiene a sus clientes**: la ansiedad ante el cambio y el hábito. Ahí suele estar la ventaja que nadie mira.
+7. **Texto exacto.** Los datos críticos (precios, planes, coberturas, términos, plazos y montos) van palabra por palabra en la sección `## Texto exacto` del perfil, cada uno con su captura de origen y su fecha. Resumirlos pierde datos.
 
 ## Statu quo y análogos
 
