@@ -14,7 +14,7 @@ brainme es la fuente de verdad de su método: qué vale guardar, en qué carpeta
 1. **Al empezar el encargo**, invoca brainme: te pone al día del proyecto y carga su método. Anota su carpeta (la que muestra al cargarse): ahí están `references/` y `templates/`.
 2. **Antes de guardar**, aplica su criterio de qué vale guardar y sus reglas de entregables (`references/entregables.md`). Las capturas web y los papers son originales: las notas guardan lo que se dedujo de ellos y apuntan a ellos.
 3. **Al lanzar un investigador**, pásale la carpeta de brainme y las rutas donde guarda cada cosa.
-4. **Al terminar**, invoca brainme para registrar los entregables, sincronizar y llevar a su tablero lo que cambió: la decisión, las posturas y los próximos pasos.
+4. **Al terminar**, guarda la decisión que informó el encargo como nota de decisión (o como pregunta abierta si nadie decidió todavía). Después invoca brainme para registrar los entregables, sincronizar y poner al día su tablero con esas notas: brainme decide qué sube y escribe la bitácora.
 
 Lo que produce discoverme, según los tipos de nota de brainme:
 
