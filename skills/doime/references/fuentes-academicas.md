@@ -13,6 +13,7 @@ Primera capa de búsqueda de literatura, antes de la búsqueda web: devuelve met
 | **Semantic Scholar** | Solo respaldo, si las demás no alcanzan: sin key suele responder 429 | `https://api.semanticscholar.org/graph/v1/paper/search?query=<consulta>&fields=title,year,venue,citationCount,externalIds` |
 
 - Las consultas van con `curl -s` y la consulta codificada (`+` entre palabras). Pide pocos campos (`select`, `fields`) para que la respuesta sea corta.
+- Si una API responde 429, espera lo que indique (o un minuto) y reintenta una vez. Si sigue, usa otra de la tabla y declara qué no se pudo consultar.
 - **OpenAlex** comparte un cupo diario gratuito entre todos los de la misma red: úsalo con moderación, pocas consultas y bien armadas. Su aviso sugiere registrar un correo para una key: eso queda fuera.
 - `<AAAA>` es el año de hace cinco años. Los clásicos fundacionales salen sin filtro de fecha y ordenados por citas.
 - Para un tema ya conocido, parte de 2–3 papers clave y sigue sus citas en OpenAlex: `filter=cites:<id de OpenAlex>` (quién los cita) y `referenced_works` (a quién citan).

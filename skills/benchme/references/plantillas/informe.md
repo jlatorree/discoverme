@@ -50,7 +50,7 @@ Vacíos, evidencia baja o caducada, tareas de primera mano pendientes, límites 
 Método. Registro de evidencia (o su enlace). Registro de cambios: qué cambió desde la versión anterior y por qué.
 ```
 
-**Modo ligero:** secciones 1, 3, 5 (breve), 7 y 11.
+**Modo ligero:** secciones 1, 3, 5 (breve), 7 y 11, con su número. El contraste de las hipótesis del usuario y el steelman van breves en la 7, y el registro de cambios al final de la 11.
 
 ## Control de calidad
 

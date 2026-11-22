@@ -1,5 +1,7 @@
 # Síntesis y desafío
 
+Escribe las propuestas de los pasos 1 a 8 en la síntesis del conocimiento, y el paso 9 en la vigilancia (`../../../motor/guardado.md`). Al elegir el usuario, anota ahí qué eligió.
+
 ## 1. Explicaciones rivales
 
 Formula 2–4 explicaciones de por qué gana quien gana ("por precio", "por integración", "por confianza"). Marca a cuáles apoya cada evidencia clave: la evidencia que encaja con todas no distingue nada. Busca refutar, no confirmar.

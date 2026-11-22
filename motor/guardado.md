@@ -6,7 +6,7 @@
 - **Espacio de brainme**: el `CLAUDE.md` tiene la sección `## brainme · espacio`. Los proyectos están en subcarpetas (`proyectos/<año>/<proyecto>/`): pregunta en cuál guardar y sigue con brainme en ese.
 - **Sin brainme**: cualquier otro caso. Si la carpeta del proyecto no es clara, pregunta una vez dónde crear `investigacion/`.
 
-Cada encargo tiene un `<tema>` corto, en minúsculas y con guiones (`seguro-vehicular`), y un **archivo del encargo**: los métodos, la pregunta o decisión, el modo o nivel, la fase actual, el plan y los sets aprobados, y lo que el usuario decidió en cada punto de control, textual. Es lo que otra sesión lee para retomar.
+Cada encargo tiene un `<tema>` corto, en minúsculas y con guiones (`seguro-vehicular`), y un **archivo del encargo**: los métodos, la pregunta o decisión, el modo o nivel, la fase actual (una sola, siempre al día), el plan y los sets aprobados, y lo que el usuario decidió en cada punto de control, textual. Es lo que otra sesión lee para retomar.
 
 ## Con brainme
 
@@ -17,7 +17,7 @@ discoverme escribe en las carpetas de brainme, con sus tipos de nota, y deja a b
 | Informe madre, ejecutiva, informe de literatura | entregable | `05_exports/reports/<nombre>/` | `benchmark-<tema>`, `benchmark-<tema>-ejecutiva`, `literatura-<tema>` |
 | Informe integrado | entregable | `05_exports/reports/<nombre>/` | `integrado-<tema>` |
 | Presentaciones HTML, cada una con su ficha de entregable | entregable | `05_exports/presentations/<nombre>/` | `benchmark-<tema>-deck`, `benchmark-<tema>-deck-ejecutivo` |
-| Brief, registro de evidencia, vigilancia | conocimiento | `01_knowledge/` | `benchmark-<tema>-brief`, `…-evidencia`, `…-vigilancia` |
+| Brief, registro de evidencia, síntesis, vigilancia | conocimiento | `01_knowledge/` | `benchmark-<tema>-brief`, `…-evidencia`, `…-sintesis`, `…-vigilancia` |
 | Perfil de cada alternativa; si ya existe, se actualiza | conocimiento | `01_knowledge/` | `<alternativa>` |
 | Decisión que informó el encargo, y posturas decididas con su porqué y lo descartado | decisión | `02_decisions/` | `benchmark-<tema>-posturas`, `literatura-<tema>-decision` |
 | Vacíos, y contradicciones con una decisión vigente | pregunta, una por archivo | `03_open_questions/` | la pregunta en pocas palabras |
@@ -48,6 +48,7 @@ investigacion/
     conocimiento/                    canónico y vivo: se actualiza en su lugar
       brief.md
       evidencia.md
+      sintesis.md
       vigilancia.md
       alternativas/<alternativa>.md
     entregables/

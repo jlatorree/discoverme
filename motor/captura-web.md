@@ -20,13 +20,13 @@ Lo hace la sesión, que habla con el usuario. Revisa qué hay disponible y díse
 - Agent Reach: `command -v agent-reach`
 - Playwright: herramientas `mcp__playwright__*` en la sesión
 
-Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuario. Sin ellas, el trabajo sigue con la búsqueda y la lectura web propias de Claude.
+Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuario. Sin ellas, el trabajo sigue con la búsqueda y la lectura web propias de Claude, y las páginas se guardan con `curl`.
 
 ## Qué usar para cada evidencia
 
 | Evidencia | Herramienta | Alternativa |
 |---|---|---|
-| Páginas de cada alternativa: oferta, planes, precios, preguntas frecuentes, términos | Crawl4AI: `crwl <url> -o md-fit -O <archivo>`; varias páginas de un sitio: `--deep-crawl bfs --max-pages <n>` | Lectura web |
+| Páginas de cada alternativa: oferta, planes, precios, preguntas frecuentes, términos | Crawl4AI: `crwl <url> -o md-fit -O <archivo>`; varias páginas de un sitio: `--deep-crawl bfs --max-pages <n>` | `curl -sL <url> -o <archivo>.html` para guardarla, y lectura web |
 | Los mismos datos en muchos sitios (planes, precios, coberturas) | Crawl4AI con esquema, sin modelo: `crwl <url> -e extraccion.yml -s esquema.json -o json` | Un `discoverme:lector` lee los markdown y llena la tabla |
 | Flujos (cotizar, simular, comparar) | Playwright (aislado): recorre el flujo y guarda capturas | Tarea de primera mano del usuario |
 | Videos (reseñas, anuncios, demostraciones) | Agent Reach: `agent-reach youtube search <consulta>`, `agent-reach youtube subtitle <url>` | — |
@@ -34,6 +34,8 @@ Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuar
 | Historia de precios y mensajes | Wayback Machine: `https://web.archive.org/cdx/search/cdx?url=<url>&output=json` y `https://web.archive.org/web/<AAAAMMDD>/<url>` | — |
 | Lo que comunica cada marca en publicidad | Google Ads Transparency Center y Meta Ad Library, con Playwright | — |
 | Reseñas de apps | `google-play-scraper` y `app-store-scraper` (npm), instaladas a pedido | Lectura de las tiendas |
+
+Si una herramienta falla o limita el uso, reintenta una vez; si sigue, pasa a la alternativa y declara qué no se pudo capturar.
 
 El esquema de Crawl4AI va en dos archivos. `extraccion.yml`:
 
@@ -56,12 +58,14 @@ Con muchas páginas, Crawl4AI no gasta tokens al rastrear, un `lector` lee los m
 
 ## Copias de respaldo
 
-Cada página que sustenta evidencia se guarda como markdown fechado en la carpeta de capturas que indica `guardado.md`, por sitio y fecha. Las capturas de flujos van en la misma carpeta. Así cada dato tiene respaldo aunque la página cambie.
+Cada página que sustenta evidencia se guarda en la carpeta de capturas (`guardado.md`), dentro de `<sitio>/<AAAA-MM-DD>/`: markdown con Crawl4AI o el HTML con `curl`. Las capturas de flujos van en la misma carpeta. Así cada dato tiene respaldo aunque la página cambie.
+
+La lectura web resume con un modelo, y sus comillas pueden no ser literales. Busca cada cita en la página guardada antes de ponerla entre comillas. Si la página no se deja guardar (vacía sin JavaScript, o rechaza la descarga), guarda un extracto, márcalo `extracto` y cita en paráfrasis; si rechaza toda lectura, pasa a ser una tarea de primera mano.
 
 ## Fuera de la regla
 
 - **Crawl4AI**: perfiles de navegador (`-p`), extracción o preguntas con modelos externos (`-j`, `-q`) y su nube.
-- **Agent Reach**: `login`, `browser setup` y `browser use`; los canales que pasan por su navegador compartido, porque reutiliza logins (Reddit, X, LinkedIn, Facebook, Instagram); la transcripción de audio (pide API key); y GitHub con el CLI `gh` (usa la cuenta del usuario).
+- **Agent Reach**: se usan solo los canales `web` y `youtube`. Queda fuera el resto: `agent-reach read <url>` (elige el canal por su cuenta), `login`, los comandos `browser`, los canales de redes sociales (pueden pasar por un navegador con sesión), la transcripción de audio (pide API key) y GitHub con el CLI `gh` (usa la cuenta del usuario).
 - Servicios en la nube que piden cuenta o API key, aunque sean gratuitos.
 
 ## Instalación

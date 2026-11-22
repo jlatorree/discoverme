@@ -15,7 +15,7 @@ Respondes qué dice la literatura sobre una pregunta y a qué decisión le sirve
 - **Respaldo**: para algo puntual (una afirmación, un criterio de un benchmark). 3–5 papers, trabajados por su resumen, sin informe. Lo haces tú, sin buscadores.
 - **Revisión completa**: una pregunta de investigación con su informe, investigada con buscadores y lectores (`../../motor/deep-research.md`).
 
-Propón el nivel y deja que el usuario confirme; si te activó otro método, el nivel ya viene dicho.
+El usuario confirma el nivel antes de que busques; si ya lo dijo, o te activó otro método, sigue con ese.
 
 ## Encargo
 

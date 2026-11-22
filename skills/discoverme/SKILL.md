@@ -27,7 +27,7 @@ Si el pedido no calza con ningún método, dilo, propone el más cercano con lo 
 
 1. **Contexto.** Detecta el modo de guardado y busca qué hay del tema (`../../motor/guardado.md`). Si hay algo, dile al usuario qué es y propón qué hacer con eso: retomar, actualizar, derivar o integrar.
 2. **Pedido.** Entiende qué quiere saber el usuario y para qué decisión, con lo que ya dijo. Pregunta solo lo necesario para elegir el método: lo que el método pregunte después parte de ahí.
-3. **Método.** Propón el método, o la combinación, con una frase de por qué. El usuario confirma.
+3. **Método.** Propón el método o la combinación, y su modo o nivel, con una frase de por qué. El usuario confirma antes de que busques nada.
 4. **Esfuerzo.** Antes de un benchmark completo, una revisión completa o un informe integrado, recomienda una vez poner la sesión en esfuerzo Extra (xhigh): la síntesis y la redacción lo aprovechan.
 5. **Registro.** Crea el archivo del encargo y, sin brainme, su fila en el índice (`../../motor/guardado.md`).
 6. **Activa** el método: lee su `SKILL.md` completo y sigue sus fases.
@@ -35,6 +35,8 @@ Si el pedido no calza con ningún método, dilo, propone el más cercano con lo 
 **Terminado cuando:** el usuario confirmó el método y el encargo está registrado.
 
 ## Durante la investigación
+
+Los archivos del plugin se leen con Read.
 
 - Al investigar a fondo: `../../motor/deep-research.md`.
 - Antes de mostrar propuestas de síntesis, una estructura o un informe: `../../motor/segunda-mirada.md`.
