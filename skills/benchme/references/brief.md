@@ -34,7 +34,7 @@ El brief encuadra el benchmark y sale listo para reenviar a quien lo pidió. Haz
 ## Plantilla
 
 ```markdown
-# Brief — benchmark <tema>
+# Brief: benchmark <tema>
 Fecha: AAAA-MM-DD · Modo: ligero | completo · Profundidad: ligera | sistémica | transición
 
 ## Decisión
@@ -49,7 +49,7 @@ Fecha: AAAA-MM-DD · Modo: ligero | completo · Profundidad: ligera | sistémica
 Momento: … · Audiencia: … · Qué se compara: … · Persona decisora: …
 
 ## Propósito
-Igualar | Aprender | Diferenciarse — <por qué>
+Igualar | Aprender | Diferenciarse: <por qué>
 
 ## Hipótesis iniciales (textuales)
 1. …

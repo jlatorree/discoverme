@@ -16,7 +16,7 @@ fecha: AAAA-MM-DD
 Los ítems que cambian algo (igualar y diferenciar), con su razón. Vigilar e ignorar, una línea cada uno.
 
 ## Por qué
-Las tres implicaciones principales, cada una con su evidencia más fuerte.
+Las implicaciones principales (hasta tres), cada una con su evidencia más fuerte.
 
 ## Qué vigilar
 Los tripwires y la acción acordada para cada uno.

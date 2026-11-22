@@ -56,7 +56,7 @@ Con muchas páginas, Crawl4AI no gasta tokens al rastrear, un `lector` lee los m
 
 ## Copias de respaldo
 
-Cada página que sustenta evidencia se guarda como markdown fechado, junto al registro de evidencia, en `capturas/<alternativa o sitio>/<AAAA-MM-DD>/`. Las capturas de flujos van en la misma carpeta. Así cada dato tiene respaldo aunque la página cambie.
+Cada página que sustenta evidencia se guarda como markdown fechado en la carpeta de capturas que indica `guardado.md`, por sitio y fecha. Las capturas de flujos van en la misma carpeta. Así cada dato tiene respaldo aunque la página cambie.
 
 ## Fuera de la regla
 

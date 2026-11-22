@@ -1,23 +1,25 @@
 ---
 name: benchme
-description: 'Benchmark estratégico co-creado: ubica un producto o servicio frente a sus alternativas reales y decide qué igualar, de qué diferenciarse, qué vigilar y qué ignorar. Úsalo cuando pidan un benchmark o análisis competitivo, actualizar uno existente, o su versión ejecutiva o presentación.'
+description: 'Método de benchmark estratégico de discoverme: una postura por alternativa (igualar, diferenciarse, vigilar o ignorar), informe madre y derivados.'
+disable-model-invocation: true
 ---
 
 # benchme
 
-Co-creas un benchmark con un strategic designer con experiencia. El resultado es un juicio fechado sobre qué hacer frente a las alternativas del cliente. El riesgo que el skill combate es la **convergencia**: terminar igual que todos por compararse con todos.
+Lo activa discoverme. Si llegaste sin él, invoca `discoverme:discoverme` primero: ahí están el encargo, el equipo de investigación, el guardado y los guardarraíles comunes.
 
-Pregunta directo y en español; el usuario conoce los marcos, así que explícalos solo si los pide. Pregunta solo lo que cambia el benchmark.
+Co-creas un benchmark con un strategic designer con experiencia. El resultado es un juicio fechado sobre qué hacer frente a las alternativas del cliente. El riesgo que el método combate es la **convergencia**: terminar igual que todos por compararse con todos.
+
+El usuario conoce los marcos: explícalos solo si los pide.
 
 ## Reparto
 
 - **El usuario encuadra, elige y juzga**: la decisión, el propósito, sus hipótesis, las alternativas, los pesos, la profundidad, la paradoja central, las posturas y qué sale al comité.
-- **Tú conversas**: llevas el triaje y el brief, presentas cada punto de control, desafías y acompañas las tareas de primera mano del usuario.
-- **El investigador investiga**: un `discoverme:investigador` reúne, etiqueta, analiza, propone y redacta, según `../../motor/deep-research.md`. Lo lanzas en el paso 2 y lo reanudas en cada paso siguiente con la referencia del paso y la respuesta del usuario, textual.
+- **Tú conduces**: llevas el triaje y el brief, investigas, propones, desafías, acompañas sus tareas de primera mano y redactas.
 
 ## Elige la rama
 
-Detecta el modo de guardado (con brainme, invócalo primero) y busca si ya existe un benchmark del tema (`../../motor/guardado.md`).
+Según lo que discoverme acordó en el encargo:
 
 - **Nuevo** → Flujo.
 - **Actualizar** uno existente → Actualizar.
@@ -39,68 +41,66 @@ Modo ligero: brief de encargo, alternativas, evidencia, imperativos operativos y
 
 ### 1. Brief
 
-Sigue `references/brief.md`.
+Sigue `references/brief.md`, partiendo de lo que el usuario ya dijo en el encargo.
 
 **Terminado cuando:** el brief está guardado con decisión, encargo, alcance, propósito, profundidad y las hipótesis del usuario, escritas por él antes de ver cualquier síntesis. Lo que no sepa queda "por confirmar con <quién>" y el brief sale listo para reenviar.
 
 ### 2. Alternativas
 
-Lanza el investigador con la ruta del brief, el modo, las rutas de guardado y `references/alternativas.md`. Vuelve con el set propuesto como punto de control.
+Haz la pasada liviana con `references/alternativas.md`; con muchos candidatos, repártela entre buscadores. Presenta el set propuesto como punto de control.
 
-**Terminado cuando:** el usuario aprobó el set, armado con una pasada liviana; cada inclusión y cada exclusión tiene su argumento, con evidencia o marcado como supuesto.
+**Terminado cuando:** el usuario aprobó el set; cada inclusión y cada exclusión tiene su argumento, con evidencia o marcado como supuesto.
 
 ### 3. Evidencia
 
-Antes, revisa con el usuario las herramientas de captura (`../../motor/captura-web.md`, "Antes de la pasada profunda"). Reanuda al investigador con el set aprobado, las herramientas disponibles, `../../motor/evidencia.md` y `../../motor/captura-web.md`. Cuando un criterio o una afirmación necesite respaldo académico, el investigador usa el skill doime en pasada liviana. En paralelo, asigna al usuario sus tareas de primera mano (`../../motor/evidencia.md`, "Primera mano") con sus guías.
+Investiga a fondo el set aprobado según `../../motor/deep-research.md`. Cuando un criterio o una afirmación necesite papers, activa doime en respaldo (`../doime/SKILL.md`). En paralelo, asigna al usuario sus tareas de primera mano (`../../motor/evidencia.md`, "Primera mano") con sus guías.
 
 **Terminado cuando:** cada alternativa en profundidad tiene evidencia fechada y etiquetada en el registro, cada URL citada fue reabierta y respalda lo atribuido, y las tareas de primera mano figuran como hechas o pendientes.
 
 ### 4. Análisis
 
-Reanuda al investigador con `references/analisis.md`. Vuelve con los perfiles y, como punto de control, las pistas sobre los supuestos de la dirección de cada alternativa.
+Arma los perfiles con `references/analisis.md`. Presenta como punto de control las pistas sobre los supuestos de la dirección de cada alternativa.
 
 **Terminado cuando:** cada alternativa en profundidad tiene su perfil completo, y la pregunta por los supuestos de su dirección tiene la respuesta del usuario o queda abierta.
 
 ### 5. Síntesis
 
-Reanuda al investigador con `references/sintesis.md`. Vuelve con sus propuestas como punto de control; tú desafías y el usuario elige.
+Sigue `references/sintesis.md`, pasa tus propuestas por la segunda mirada (`../../motor/segunda-mirada.md`) y preséntalas como punto de control, con los desafíos del revisor: el usuario elige.
 
-**Terminado cuando:** las convenciones de la categoría están contrastadas con los primeros principios; cada ítem comparado tiene postura, razón y evidencia; el steelman de la opción descartada está escrito; el usuario eligió la paradoja central; pasaron las pruebas de cierre; y la vigilancia tiene tripwires.
+**Terminado cuando:** el revisor desafió las propuestas; las convenciones de la categoría están contrastadas con los primeros principios; cada ítem comparado tiene postura, razón y evidencia; el steelman de la opción descartada está escrito; el usuario eligió la paradoja central; pasaron las pruebas de cierre; y la vigilancia tiene tripwires.
 
 ### 6. Informe madre
 
-Reanuda al investigador con `references/plantillas/informe.md` y las decisiones del usuario. Revisa su borrador antes de mostrarlo. El **informe madre** es siempre el entregable principal; todo lo demás deriva de él.
+Redáctalo con `references/plantillas/informe.md` y las decisiones del usuario, y pásalo por la segunda mirada antes de mostrarlo. El **informe madre** es siempre el entregable principal; todo lo demás deriva de él.
 
-**Terminado cuando:** el informe vigente está guardado según `../../motor/guardado.md`, la versión anterior (si existe) está en `versiones/` y pasó el control de calidad de la plantilla. Al cerrar, ofrece los derivados.
+**Terminado cuando:** el informe vigente está guardado según `../../motor/guardado.md`, la versión anterior (si existe) está en `versiones/`, y pasó el control de calidad de la plantilla y la segunda mirada sin bloqueantes. Al cerrar, ofrece los derivados.
 
 ## Actualizar
 
-Lanza un investigador con el informe vigente y el conocimiento del benchmark (brief, evidencia, perfiles y vigilancia):
+Parte del informe vigente y del conocimiento del benchmark (brief, evidencia, perfiles y vigilancia):
 
 1. Revisa cada tripwire y cada suposición: qué cambió.
 2. Refresca la evidencia caducada (precios e interfaces primero) y agrega la nueva con fecha.
 3. Rehaz con el usuario solo las fases afectadas, con sus puntos de control.
-4. Guarda una versión nueva del informe con su registro de cambios: qué cambió y por qué.
+4. Guarda una versión nueva del informe con su registro de cambios (qué cambió y por qué), y pásala por la segunda mirada antes de mostrarla.
 
-**Terminado cuando:** la versión nueva está guardada, el registro de cambios está escrito, cada tripwire está revisado y avisaste qué derivados quedaron desactualizados.
+**Terminado cuando:** la versión nueva está guardada y pasó la segunda mirada sin bloqueantes, el registro de cambios está escrito, cada tripwire está revisado y avisaste qué derivados quedaron desactualizados.
 
 ## Derivados
 
 Salen siempre del informe vigente y declaran de qué versión salen.
 
-- **Ejecutiva** → la redacta un investigador con `references/plantillas/ejecutiva.md`.
-- **Presentación HTML**, completa o ejecutiva → tú, con `references/presentaciones.md`.
+- **Ejecutiva** → con `references/plantillas/ejecutiva.md`.
+- **Presentación HTML**, completa o ejecutiva → con `references/presentaciones.md`.
 
 **Terminado cuando:** el derivado está guardado según `../../motor/guardado.md` y declara su versión de origen.
 
 ## Guardarraíles
 
-Valen en todas las ramas, para ti y para el investigador.
+Valen en todas las ramas, además de los de discoverme.
 
 **Evidencia**
 - Cada afirmación remite a una entrada del registro (`../../motor/evidencia.md`).
-- Produces coherencia con facilidad, y la coherencia no prueba nada: cada conclusión se apoya en evidencia observada.
-- Fuentes públicas y acceso sin login (`../../motor/captura-web.md`). Antes de usar datos internos o de clientes, pregunta.
 
 **Contra la convergencia**
 - Cada ítem termina en una postura. El informe compara posturas.
@@ -120,4 +120,4 @@ Valen en todas las ramas, para ti y para el investigador.
 
 ## Referencias
 
-- `references/fuentes.md`: la versión vigente de cada marco que usa el skill, con su fuente y la regla para actualizarla. Consúltala al citar un marco o si el usuario pregunta por su origen.
+- `references/fuentes.md`: la versión vigente de cada marco que usa el método, con su fuente y la regla para actualizarla. Consúltala al citar un marco o si el usuario pregunta por su origen.

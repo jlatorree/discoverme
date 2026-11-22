@@ -2,70 +2,81 @@
 
 ## Detecta el modo
 
-- **Con brainme**: el proyecto tiene `05_exports/` y `01_knowledge/`, o su `CLAUDE.md` menciona brainme.
-- **Sin brainme**: cualquier otro caso. Si la carpeta del proyecto no es clara, pregunta una vez dónde crear la raíz.
+- **Con brainme**: la carpeta del proyecto tiene `05_exports/` y `01_knowledge/`.
+- **Espacio de brainme**: el `CLAUDE.md` tiene la sección `## brainme · espacio`. Los proyectos están en subcarpetas (`proyectos/<año>/<proyecto>/`): pregunta en cuál guardar y sigue con brainme en ese.
+- **Sin brainme**: cualquier otro caso. Si la carpeta del proyecto no es clara, pregunta una vez dónde crear `investigacion/`.
 
-Cada encargo tiene un `<tema>` corto, en minúsculas y con guiones (`seguro-vehicular`).
+Cada encargo tiene un `<tema>` corto, en minúsculas y con guiones (`seguro-vehicular`), y un **archivo del encargo**: los métodos, la pregunta o decisión, el modo o nivel, la fase actual, el plan y los sets aprobados, y lo que el usuario decidió en cada punto de control, textual. Es lo que otra sesión lee para retomar.
 
 ## Con brainme
 
-brainme es la fuente de verdad de su método: qué vale guardar, en qué carpeta, con qué plantilla, cómo se marca lo que se sabe y cómo se versiona. discoverme lo sigue tal como esté vigente.
+discoverme escribe en las carpetas de brainme, con sus tipos de nota, y deja a brainme sincronizar, actualizar su tablero y escribir su bitácora. Lo que vale guardar como nota es lo que se dedujo; las capturas web y los papers son originales, y las notas apuntan a ellos.
 
-1. **Al empezar el encargo**, invoca brainme: te pone al día del proyecto y carga su método. Anota su carpeta (la que muestra al cargarse): ahí están `references/` y `templates/`.
-2. **Antes de guardar**, aplica su criterio de qué vale guardar y sus reglas de entregables (`references/entregables.md`). Las capturas web y los papers son originales: las notas guardan lo que se dedujo de ellos y apuntan a ellos.
-3. **Al lanzar un investigador**, pásale la carpeta de brainme y las rutas donde guarda cada cosa.
-4. **Al terminar**, guarda la decisión que informó el encargo como nota de decisión (o como pregunta abierta si nadie decidió todavía). Después invoca brainme para registrar los entregables, sincronizar y poner al día su tablero con esas notas: brainme decide qué sube y escribe la bitácora.
+| Qué | Tipo | Carpeta | Nombre |
+|---|---|---|---|
+| Informe madre, ejecutiva, informe de literatura | entregable | `05_exports/reports/<nombre>/` | `benchmark-<tema>`, `benchmark-<tema>-ejecutiva`, `literatura-<tema>` |
+| Informe integrado | entregable | `05_exports/reports/<nombre>/` | `integrado-<tema>` |
+| Presentaciones HTML, cada una con su ficha de entregable | entregable | `05_exports/presentations/<nombre>/` | `benchmark-<tema>-deck`, `benchmark-<tema>-deck-ejecutivo` |
+| Brief, registro de evidencia, vigilancia | conocimiento | `01_knowledge/` | `benchmark-<tema>-brief`, `…-evidencia`, `…-vigilancia` |
+| Perfil de cada alternativa; si ya existe, se actualiza | conocimiento | `01_knowledge/` | `<alternativa>` |
+| Decisión que informó el encargo, y posturas decididas con su porqué y lo descartado | decisión | `02_decisions/` | `benchmark-<tema>-posturas`, `literatura-<tema>-decision` |
+| Vacíos, y contradicciones con una decisión vigente | pregunta, una por archivo | `03_open_questions/` | la pregunta en pocas palabras |
+| Paper; si ya existe, se amplía | literatura, con `../skills/doime/references/ficha.md` | `04_sources/literature/` | `apellido-anio-palabra-clave` |
+| Fuente web no académica que sustenta algo clave | fuente-web | `04_sources/web/` | `sitio-tema` |
+| Capturas de páginas y flujos | material de trabajo | `_taller/capturas/<sitio>/<AAAA-MM-DD>/` | — |
+| Archivo del encargo | material de trabajo | `_taller/encargos/` | `<tema>` |
+| Estructura del informe integrado, que edita el usuario | material de trabajo | `_taller/` | `integrado-<tema>-estructura` |
 
-Lo que produce discoverme, según los tipos de nota de brainme:
+**Forma de cada nota.** Antes de crear una nota de un tipo, abre una existente del mismo tipo en el proyecto y sigue su forma: frontmatter y secciones. Si no hay ninguna, usa este frontmatter:
 
-| Qué | Tipo en brainme | Nombre |
-|---|---|---|
-| Informe madre, ejecutiva, presentaciones | entregable | `benchmark-<tema>`, `benchmark-<tema>-ejecutiva`, `benchmark-<tema>-deck`, `benchmark-<tema>-deck-ejecutivo` |
-| Informe de literatura | entregable | `literatura-<tema>` |
-| Brief, registro de evidencia, vigilancia | conocimiento | `benchmark-<tema>-brief`, `…-evidencia`, `…-vigilancia` |
-| Perfil de cada alternativa | conocimiento; si ya existe, se actualiza | `<alternativa>` |
-| Posturas decididas, con el porqué y lo descartado | decisión | `benchmark-<tema>-posturas` |
-| Vacíos, y contradicciones con una decisión vigente | pregunta abierta, una por archivo | — |
-| Paper | fuente de literatura, con `literature-note.md`; si ya existe, se amplía | `apellido-anio-palabra-clave` |
-| Fuente web no académica que sustenta algo clave | fuente web, con `web-source.md` | `sitio-tema` |
+- Todas: `titulo`, `tipo`, `fecha`, `proyecto`, `resumen` (una o dos frases), `tags`, `relacionadas` (wikilinks) y `origen: "discoverme <tema> AAAA-MM-DD"`.
+- Conocimiento: `certeza: confirmado` si se apoya en evidencia observada con confianza alta, `certeza: supuesto` si es interpretada o su confianza es moderada o baja; y `como_se_sabe`: la fuente, con el wikilink a su ficha si la tiene, y la fecha de verificación (`"Pérez 2023, [[perez-2023-onboarding-pymes]], verificado 2026-11-21"`).
+- Decisión: `estado` (propuesta o tomada) y `decidido_por`.
+- Pregunta: `estado: abierta`, `prioridad` y `quien_puede_responder`.
+- Fuente web: `source_url`, `sitio`, `consultado` y `fiabilidad`.
+- Ficha de entregable (lo que no es `.md`): `formato`, `archivo`, `version`, `estado` y `generado_con: discoverme`.
 
-Los entregables enlazan con wikilinks lo que los sustenta.
-
-Cada nota de conocimiento lleva en el frontmatter cómo se sabe, traducido desde el registro de evidencia (`evidencia.md`):
-
-- `certeza: confirmado` si se apoya en evidencia observada con confianza alta; `certeza: supuesto` si es interpretada o su confianza es moderada o baja.
-- `como_se_sabe`: la fuente, con el wikilink a su ficha si la tiene, y la fecha de verificación. Por ejemplo: `"Pérez 2023, [[perez-2023-onboarding-pymes]], verificado 2026-11-21"`.
+Cada entregable va en su carpeta con su versión en el nombre (`literatura-<tema>/literatura-<tema>-v1.md`) y enlaza con wikilinks lo que lo sustenta. Los wikilinks a un entregable llevan su versión (`[[literatura-<tema>-v1]]`); al salir una versión nueva, apúntalos a ella. Lo que ya hay de un tema se encuentra por el nombre de sus notas.
 
 ## Sin brainme
 
 ```
-benchmarks/<tema>/                         benchme
-  conocimiento/                            canónico y vivo: se actualiza en su lugar
-    brief.md
-    evidencia.md
-    vigilancia.md
-    alternativas/<alternativa>.md
-  entregables/
-    informe/          <tema>-informe-vN.md + versiones/
-    ejecutiva/        <tema>-ejecutiva-vN.md + versiones/
-    presentaciones/   <tema>-deck-vN.html, <tema>-deck-ejecutivo-vN.html + versiones/
-
-literatura/                                doime
-  fichas/apellido-anio-palabra-clave.md    compartidas entre temas; se amplían en su lugar
-  <tema>/
-    informe/          literatura-<tema>-vN.md + versiones/
+investigacion/
+  indice.md                          un encargo por fila
+  encargos/<tema>.md                 archivo del encargo
+  benchmarks/<tema>/                 benchme
+    conocimiento/                    canónico y vivo: se actualiza en su lugar
+      brief.md
+      evidencia.md
+      vigilancia.md
+      alternativas/<alternativa>.md
+    entregables/
+      informe/          <tema>-informe-vN.md + versiones/
+      ejecutiva/        <tema>-ejecutiva-vN.md + versiones/
+      presentaciones/   <tema>-deck-vN.html, <tema>-deck-ejecutivo-vN.html + versiones/
+  literatura/<tema>/                 doime
+    informe/            literatura-<tema>-vN.md + versiones/
+  integrados/<tema>/                 informe integrado
+    <tema>-estructura.md             la edita el usuario
+    informe/            <tema>-integrado-vN.md + versiones/
+  fichas/                            una por paper, compartidas entre temas y métodos
+  capturas/<sitio>/<AAAA-MM-DD>/     páginas y flujos capturados
 ```
 
-La ficha de cada paper sigue `../skills/doime/references/ficha.md`.
+`indice.md` es una tabla: tema, método, decisión que informa, estado (en curso, entregado o en pausa), ruta del entregable vigente y fecha de actualización. Lo que ya hay de un tema se encuentra ahí.
 
-Versiones:
+La primera vez que crees `investigacion/` en un proyecto, menciona en una línea que brainme puede llevar estas notas como segundo cerebro del proyecto: si brainme está entre tus skills, que lo configure; si no, que lo instale desde `github.com/jlatorree/brainme`. Una sola vez.
+
+## Versiones (ambos modos)
 
 - Una versión nueva es un archivo nuevo con el número siguiente (`-v2`).
 - A la vista queda solo la versión vigente; las anteriores pasan a `versiones/` de su carpeta.
 - El conocimiento canónico y las fichas se actualizan en su lugar; la historia queda en el registro de cambios del informe.
+- Cada derivado declara al inicio de qué versión del informe sale; el informe integrado es derivado de cada informe que reúne. Al salir un informe nuevo, avisa qué derivados quedaron desactualizados.
 
-## Derivados (ambos modos)
+## Al cerrar
 
-Cada derivado declara al inicio de qué versión del informe sale. Al salir un informe nuevo, avisa qué derivados quedaron desactualizados.
+- **Con brainme**: guarda la decisión que informó el encargo como decisión, o como pregunta abierta si nadie decidió todavía. En la entrega, lista las notas creadas o actualizadas y sugiere en una línea pedirle a brainme que sincronice; si la investigación responde una pregunta abierta, que la gradúe.
+- **Sin brainme**: pon al día la fila del encargo en `indice.md`.
 
-**Terminado cuando:** cada archivo está en su lugar, solo la versión vigente está a la vista y, con brainme, brainme sincronizó.
+**Terminado cuando:** cada archivo está en su lugar, solo la versión vigente está a la vista, y el índice (sin brainme) o la lista para brainme (con brainme) está al día.

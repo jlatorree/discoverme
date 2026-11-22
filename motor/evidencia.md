@@ -1,6 +1,6 @@
 # Evidencia
 
-Reglas para todo lo que un skill de discoverme afirme sobre el mundo. Cómo capturar fuentes web y qué queda fuera por la regla sin login: `captura-web.md`. Papers: `fuentes-academicas.md`.
+Reglas para todo lo que un skill de discoverme afirme sobre el mundo. Cómo capturar fuentes web y qué queda fuera por la regla sin login: `captura-web.md`. Papers: `../skills/doime/references/fuentes-academicas.md`.
 
 ## Registro
 

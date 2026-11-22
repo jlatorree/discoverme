@@ -1,14 +1,12 @@
 # Criterios de fuentes
 
-Van completos en cada encargo de búsqueda, incluido el de cada `buscador`.
-
 ## Qué entra
 
 - Revisión por pares o venue reputado. Los preprints entran marcados como tales.
 - Fuente primaria: el paper que hizo el estudio, no quien lo resume.
 - Lo más citado y lo más reciente (unos 5 años), más los clásicos clave, marcados como fundacionales.
 - Evidencia en contra o debates, si existen.
-- Trabajos vigentes en revistas legítimas: los retractados y los de revistas depredadoras quedan fuera (cómo detectarlos: `../../../motor/fuentes-academicas.md`).
+- Trabajos vigentes en revistas legítimas: los retractados y los de revistas depredadoras quedan fuera (cómo detectarlos: `fuentes-academicas.md`).
 
 ## Qué se anota de cada paper
 

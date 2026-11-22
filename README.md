@@ -1,11 +1,13 @@
 # discoverme
 
-Research estratégico co-creado con Claude. Un solo motor de evidencia y dos skills que lo usan:
+Investigación estratégica co-creada con Claude. Le pides una investigación a **discoverme**, que actúa como investigador a cargo: entiende el pedido, elige contigo el método y lo conduce hasta el informe.
+
+Métodos disponibles:
 
 - **benchme**: benchmarks estratégicos. Ubica un producto o servicio frente a sus alternativas reales y ayuda a decidir **qué igualar, de qué diferenciarse, qué vigilar y qué ignorar**, sin caer en la convergencia: terminar igual que todos por compararse con todos.
 - **doime**: revisiones de literatura académica. Busca, verifica y sintetiza papers sobre una pregunta, con una ficha por paper y un informe donde cada afirmación cita su fuente.
 
-Cada skill se activa solo, según lo que pidas, y se llaman entre sí: cuando un criterio del benchmark necesita respaldo académico, benchme le pide a doime una pasada liviana.
+Los métodos se combinan. Cuando un criterio del benchmark necesita respaldo académico, discoverme activa doime en respaldo. Y cuando quieres un solo informe con el benchmark, la literatura y lo demás que tengas del tema, escribe un **informe integrado**: te sugiere la estructura completa, con todo el panorama del corpus, y redacta sobre lo que edites.
 
 ## Instalación
 
@@ -20,14 +22,38 @@ Para las presentaciones HTML de benchme necesitas además el skill [frontend-sli
 
 ## Uso
 
-Pídelo en lenguaje natural:
+Pídelo en lenguaje natural o con `/discoverme:discoverme`:
 
 - "Hazme un benchmark de seguros vehiculares digitales"
 - "Actualiza el benchmark de seguro-vehicular" / "Saca la versión ejecutiva"
 - "¿Qué dice la literatura sobre el abandono en procesos de alta?"
 - "Busca papers que respalden esta afirmación"
+- "Hazme un informe final que integre el benchmark y la literatura"
+
+Para una investigación completa, pon la sesión en esfuerzo Extra: la síntesis y la redacción lo aprovechan.
 
 ## Cómo trabaja
+
+```
+Tú ⇄ discoverme (la sesión: el investigador)
+        ├─ activa un método: benchme, doime
+        ├─ reparte el trabajo de campo: buscadores y lectores, en paralelo
+        ├─ pasa lo que te muestra por un revisor: propuestas de síntesis e informes
+        └─ sigue el motor: evidencia, captura web, deep research, segunda mirada, redacción, guardado
+```
+
+- **discoverme** conversa contigo, planifica, reparte, verifica, sintetiza y redacta. Se detiene en cada punto de control para que decidas.
+- **Los métodos** dicen qué fases tiene la investigación, qué se decide en cada una y con qué plantilla se entrega.
+- **Buscadores y lectores** son agentes que trabajan en paralelo, cada uno con su propio contexto, y devuelven solo lo encontrado. Así la sesión queda libre para conversar y sintetizar.
+- **El revisor** llega sin haber visto la investigación. Desafía las propuestas de síntesis y revisa cada informe contra su control de calidad, siguiendo las citas que más pesan hasta su fuente. Lo que no puede llegarte así se corrige antes; los desafíos que quedan abiertos te llegan junto con la propuesta, para que decidas.
+
+| Agente | Rol | Modelo |
+|---|---|---|
+| `buscador` | Busca y lee una subpregunta | Opus, esfuerzo alto |
+| `lector` | Lee un documento largo | Opus, esfuerzo alto |
+| `revisor` | Desafía la síntesis y revisa cada informe antes de mostrarlo | Opus, esfuerzo xhigh (Extra), aunque la sesión esté en otro nivel |
+
+**Reparto:** Claude reúne, verifica, propone y desafía. Tú encuadras, eliges y juzgas.
 
 ### benchme
 
@@ -42,26 +68,16 @@ Entregables: el **informe madre** siempre; a pedido, una versión ejecutiva y pr
 
 ### doime
 
-- **Pasada liviana:** 3–5 papers, por su resumen, para respaldar algo puntual.
+- **Respaldo:** 3–5 papers, por su resumen, para algo puntual.
 - **Revisión completa:** preselección de papers contigo, deep research y un informe con hallazgos, evidencia en contra, implicaciones y límites.
 
 Busca primero en APIs académicas abiertas (Crossref, OpenAlex, arXiv, Europe PMC) y después en la web. Cada DOI se verifica en doi.org y los trabajos retractados quedan fuera.
 
-**Reparto:** Claude reúne, verifica, propone y desafía. Tú encuadras, eliges y juzgas.
+### Informe integrado
 
-## El motor
-
-`motor/` es la fuente única que comparten los skills: reglas de evidencia, captura web, fuentes académicas, cómo se orquesta el deep research y dónde se guarda.
-
-Tú conversas con la sesión: encuadras, apruebas y decides. La investigación la lleva un solo agente de principio a fin, así quien redacta el informe vio todo lo investigado:
-
-| Agente | Rol | Modelo |
-|---|---|---|
-| `investigador` | Planifica, reparte, verifica, sintetiza y redacta. Se detiene en cada punto de control para que decidas, y sigue con tu respuesta | Opus, esfuerzo xhigh (Extra) |
-| `buscador` | Busca y lee una subpregunta | Opus, esfuerzo alto |
-| `lector` | Lee un documento largo | Opus, esfuerzo alto |
-
-Los agentes trabajan con su propio modelo y esfuerzo, aunque tu sesión esté en otro nivel.
+1. **Panorama:** reúne todo lo que hay del tema, con su versión y su solidez.
+2. **Estructura sugerida:** un archivo con todas las secciones posibles, cada una con lo que diría, en qué se apoya y si discoverme la sugiere, la deja opcional o no tiene material. Tú lo editas.
+3. **Redacción:** sigue tu versión de la estructura. Organiza por ideas, muestra dónde las fuentes coinciden y dónde chocan, y cada afirmación conserva su cita de origen.
 
 ## Acceso sin login
 
@@ -69,7 +85,7 @@ discoverme solo usa acceso público: nada que requiera tu sesión ni cuentas o A
 
 ### Herramientas opcionales
 
-Funciona con la búsqueda y la lectura web de Claude. Con muchas fuentes rinde mejor con estas, que el skill revisa y te ofrece instalar:
+Funciona con la búsqueda y la lectura web de Claude. Con muchas fuentes rinde mejor con estas, que discoverme revisa y te ofrece instalar:
 
 - [Crawl4AI](https://github.com/unclecode/crawl4ai): páginas como markdown limpio y extracción estructurada sin modelo.
 - [Agent Reach](https://github.com/Panniantong/Agent-Reach): YouTube (búsqueda y subtítulos) y búsqueda web alternativa.
@@ -77,10 +93,14 @@ Funciona con la búsqueda y la lectura web de Claude. Con muchas fuentes rinde m
 
 ## Dónde guarda
 
-- **Con [brainme](https://github.com/jlatorree/brainme):** sigue el método vigente de brainme: sus carpetas, sus plantillas y su criterio de qué vale guardar.
-- **Sin brainme:** `benchmarks/<tema>/` y `literatura/`.
+- **Sin brainme:** todo en `investigacion/`, con un `indice.md` y un archivo por encargo para retomarlo, una carpeta por benchmark y por revisión de literatura, informes integrados, fichas de papers compartidas y las capturas web.
+- **Con [brainme](https://github.com/jlatorree/brainme):** discoverme escribe en las carpetas de brainme con sus tipos de nota, siguiendo la forma de las notas que ya tiene el proyecto. No invoca a brainme: al terminar te dice qué guardó y te sugiere pedirle a brainme que sincronice.
 
 En ambos casos, a la vista queda solo la versión vigente y las anteriores en `versiones/`.
+
+## Sumar un método
+
+Un método nuevo es un skill en `skills/<método>/`, con `disable-model-invocation: true` para que la entrada sea siempre discoverme, y una fila en la tabla de métodos de `skills/discoverme/SKILL.md`. El skill define sus ramas, sus fases con su "terminado cuando" y sus puntos de control, su plantilla de entrega y sus guardarraíles propios; lo común (encargo, equipo, evidencia, redacción y guardado) ya lo ponen discoverme y `motor/`. Si guarda algo nuevo, suma su carpeta en `motor/guardado.md`.
 
 ## Fuentes
 
