@@ -12,13 +12,13 @@ Reúne todo lo que hay del tema: informes vigentes con su conocimiento (registro
 
 ## 2. Estructura sugerida
 
-Llena la plantilla de abajo con el corpus real y guárdala como archivo (`../../../motor/guardado.md`). Conserva todas las secciones y marca cada una:
+Llena la plantilla de abajo con el corpus real y guárdala como archivo (`../../../motor/entrega.md`). Conserva todas las secciones y marca cada una:
 
 - **sugerida**: responde a la decisión y tiene evidencia;
 - **opcional**: tiene evidencia, y la decisión se entiende sin ella;
 - **sin material**: ayudaría, y el corpus no alcanza; di qué faltaría investigar.
 
-Pásala por la segunda mirada (`../../../motor/segunda-mirada.md`) y preséntala como punto de control: la ruta del archivo, el mensaje tentativo, las ideas en una línea cada una y lo más débil. El usuario edita el archivo o pide los cambios en el chat.
+Pásala por la segunda mirada (`../SKILL.md`) y preséntala como punto de control: la ruta del archivo, el mensaje tentativo, las ideas en una línea cada una y lo más débil. El usuario edita el archivo o pide los cambios en el chat.
 
 **Terminado cuando:** toda la plantilla está llena, el usuario dio por lista la estructura, y el archivo quedó con `estado: aprobada`.
 
@@ -32,7 +32,7 @@ Redacta, pasa el control de calidad y la segunda mirada, y guarda.
 
 ## Reglas con cualquier estructura
 
-- **Cita de origen.** Cada afirmación conserva la de su método, con enlace: la del benchmark, a su registro (sin brainme, `[E12](../../../benchmarks/<tema>/conocimiento/evidencia.md)`; con brainme, `[[benchmark-<tema>-evidencia|E12]]`); la de un paper, doble cita.
+- **Cita de origen.** Cada afirmación conserva la de su método, con enlace: la del benchmark, a su registro (`[E12](../../../benchmarks/<tema>/conocimiento/evidencia.md)`); la de un paper, doble cita.
 - **Origen declarado.** El frontmatter lleva `deriva_de`, con cada informe que reúne y su versión.
 - **Una fuente cuenta una vez.** Un paper que citan el benchmark y la revisión de literatura es una sola fuente.
 - **Solidez.** Usa la confianza de `../../../motor/evidencia.md` y di de qué tipo de evidencia sale cada idea.

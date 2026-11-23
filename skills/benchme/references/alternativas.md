@@ -2,7 +2,7 @@
 
 La pregunta raíz: **si nuestra oferta no existiera, ¿qué haría el cliente?** La competencia que cuenta es la que el cliente considera, no la que el equipo imagina.
 
-Este paso es la pasada liviana del embudo (`../../../motor/captura-web.md`): búsqueda y una página por candidato, lo justo para proponer el set. La investigación profunda empieza en el paso 3, solo con lo que el usuario apruebe.
+Este paso es la pasada liviana del embudo (`../../../motor/evidencia.md`): búsqueda y una página por candidato, lo justo para proponer el set. La investigación profunda empieza en el paso 3, solo con lo que el usuario apruebe.
 
 ## Roles
 

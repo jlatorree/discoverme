@@ -1,6 +1,6 @@
 # Fuentes académicas
 
-Primera capa de búsqueda de literatura, antes de la búsqueda web: devuelve metadatos estructurados (DOI, venue, año, citas, acceso abierto) que la web da sueltos o mal. Todas responden sin cuenta ni API key; la regla sin login está en `../../../motor/captura-web.md`.
+Primera capa de búsqueda de literatura, antes de la búsqueda web: devuelve metadatos estructurados (DOI, venue, año, citas, acceso abierto) que la web da sueltos o mal. Todas responden sin cuenta ni API key; la regla sin login está en `../../../motor/evidencia.md`.
 
 ## Qué usar
 
@@ -12,7 +12,7 @@ Primera capa de búsqueda de literatura, antes de la búsqueda web: devuelve met
 | **Europe PMC** | Salud, biomedicina, psicología; texto completo abierto | `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=<consulta>&format=json&pageSize=25` |
 | **Semantic Scholar** | Solo respaldo, si las demás no alcanzan: sin key suele responder 429 | `https://api.semanticscholar.org/graph/v1/paper/search?query=<consulta>&fields=title,year,venue,citationCount,externalIds` |
 
-- Las consultas van con `curl -s` y la consulta codificada (`+` entre palabras). Pide pocos campos (`select`, `fields`) para que la respuesta sea corta.
+- Las consultas van con `curl -s` y la consulta codificada (`+` entre palabras). Pide pocos campos (`select`, `fields`) para que la respuesta sea corta. Corre cada consulta como un `curl` simple, una por llamada (varias pueden ir en paralelo), y lee la respuesta tal cual o filtrada con `jq`. Así cada llamada pide un solo permiso, que el usuario puede aprobar una vez.
 - Si una API responde 429, espera lo que indique (o un minuto) y reintenta una vez. Si sigue, usa otra de la tabla y declara qué no se pudo consultar.
 - **OpenAlex** comparte un cupo diario gratuito entre todos los de la misma red: úsalo con moderación, pocas consultas y bien armadas. Su aviso sugiere registrar un correo para una key: eso queda fuera.
 - `<AAAA>` es el año de hace cinco años. Los clásicos fundacionales salen sin filtro de fecha y ordenados por citas.
@@ -28,7 +28,7 @@ Primera capa de búsqueda de literatura, antes de la búsqueda web: devuelve met
 ## Texto completo
 
 - Enlace abierto: `best_oa_location.pdf_url` de OpenAlex, el PDF de arXiv o el texto completo de Europe PMC.
-- Páginas y PDFs abiertos se leen con la lectura web o Crawl4AI (`../../../motor/captura-web.md`); un documento largo, con el agente `discoverme:lector`.
+- Páginas y PDFs abiertos se leen con la lectura web y se guardan como cualquier página (`../../../motor/evidencia.md`); un documento largo, con el agente `discoverme:lector`.
 - Sin enlace abierto se trabaja con el resumen y la ficha lo dice (`leido: solo abstract`). Si el usuario tiene el PDF, lo aporta él.
 
 ## Fuera de la regla

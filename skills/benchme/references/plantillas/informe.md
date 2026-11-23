@@ -4,7 +4,7 @@ Títulos en lenguaje de negocio; los nombres de los marcos van dentro del texto.
 
 ```markdown
 ---
-tipo: benchmark        # con brainme: tipo: entregable
+tipo: benchmark
 tema: <tema>
 version: N
 fecha: AAAA-MM-DD

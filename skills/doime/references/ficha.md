@@ -1,6 +1,6 @@
 # Ficha de paper
 
-Cada ficha es un archivo `apellido-anio-palabra-clave.md`. Su forma es compatible con la ficha de literatura de brainme; si el proyecto ya tiene fichas, sigue la forma de las existentes. Un dato que no está queda "no reportado". Sin brainme, `proyecto` y `relacionadas` se borran.
+Cada ficha es un archivo `apellido-anio-palabra-clave.md`. Un dato que no está queda "no reportado". Su forma es la de la ficha de literatura de brainme, así brainme la puede archivar tal cual; `proyecto` y `relacionadas` son opcionales.
 
 ```markdown
 ---

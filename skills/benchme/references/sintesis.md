@@ -1,6 +1,6 @@
 # Síntesis y desafío
 
-Escribe las propuestas de los pasos 1 a 8 en la síntesis del conocimiento, y el paso 9 en la vigilancia (`../../../motor/guardado.md`). Al elegir el usuario, anota ahí qué eligió.
+Escribe las propuestas de los pasos 1 a 8 en la síntesis del conocimiento, y el paso 9 en la vigilancia (`../../../motor/entrega.md`). Al elegir el usuario, anota ahí qué eligió.
 
 ## 1. Explicaciones rivales
 

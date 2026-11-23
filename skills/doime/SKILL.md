@@ -13,29 +13,29 @@ Respondes qué dice la literatura sobre una pregunta y a qué decisión le sirve
 ## Elige el nivel
 
 - **Respaldo**: para algo puntual (una afirmación, un criterio de un benchmark). 3–5 papers, trabajados por su resumen, sin informe. Lo haces tú, sin buscadores.
-- **Revisión completa**: una pregunta de investigación con su informe, investigada con buscadores y lectores (`../../motor/deep-research.md`).
+- **Revisión completa**: una pregunta de investigación con su informe, investigada con buscadores y lectores en el deep research de discoverme.
 
 El usuario confirma el nivel antes de que busques; si ya lo dijo, o te activó otro método, sigue con ese.
 
 ## Encargo
 
-Escribe en el archivo del encargo, en una frase cada una, la pregunta de investigación y la decisión o pregunta del proyecto a la que sirve. Revisa qué papers ya están fichados (`../../motor/guardado.md`): lo fichado se reutiliza y se amplía.
+Escribe en el archivo del encargo, en una frase cada una, la pregunta de investigación y la decisión o pregunta del proyecto a la que sirve. Revisa qué papers ya están fichados (`../../motor/entrega.md`): lo fichado se reutiliza y se amplía.
 
 **Terminado cuando:** la pregunta y su decisión están escritas, el nivel está confirmado y tienes la lista de fichas existentes del tema.
 
 ## Respaldo
 
-1. Busca en las APIs académicas (`references/fuentes-academicas.md`) y, solo para lo que no cubran, en la web. Aplica `references/criterios.md`.
+1. Busca en las APIs académicas (`references/fuentes-academicas.md`) y, solo para lo que no cubran, en la web. Busca aunque ya recuerdes un paper: la búsqueda trae lo más reciente y lo que lo contradice. Aplica `references/criterios.md`.
 2. Verifica cada paper ("Verificación de cada paper" en `references/fuentes-academicas.md`).
 3. Guarda una ficha por paper (ver Fichas).
 
-**Terminado cuando:** cada paper respondió 302 en doi.org, no está retractado y tiene su ficha.
+**Terminado cuando:** cada paper salió de la búsqueda, respondió 302 en doi.org, no está retractado y tiene su ficha.
 
 ## Revisión completa
 
-1. **Preselección.** Busca candidatos por su resumen (`references/fuentes-academicas.md`, `references/criterios.md`). Preséntalos como punto de control junto con el plan (`../../motor/deep-research.md`), cada uno con su argumento: qué aporta y por qué cumple los criterios.
-2. **Pasada profunda.** Sigue `../../motor/deep-research.md` desde el reparto, con el set y el plan aprobados, y guarda una ficha por paper.
-3. **Informe.** Redáctalo con `references/informe.md`, pasa su control de calidad y pásalo por la segunda mirada (`../../motor/segunda-mirada.md`) antes de mostrarlo.
+1. **Preselección.** Busca candidatos por su resumen (`references/fuentes-academicas.md`, `references/criterios.md`). Preséntalos como punto de control junto con el plan del deep research de discoverme, cada uno con su argumento: qué aporta y por qué cumple los criterios.
+2. **Pasada profunda.** Sigue el deep research desde el reparto, con el set y el plan aprobados, y guarda una ficha por paper.
+3. **Informe.** Redáctalo con `references/informe.md`, pasa su control de calidad y pásalo por la segunda mirada de discoverme antes de mostrarlo.
 
 **Terminado cuando:** el usuario aprobó el set y el plan, cada paper usado está verificado y fichado, y el informe vigente está guardado y pasó el control de `references/informe.md` y la segunda mirada sin bloqueantes.
 

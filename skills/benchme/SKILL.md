@@ -53,7 +53,7 @@ Haz la pasada liviana con `references/alternativas.md`; con muchos candidatos, r
 
 ### 3. Evidencia
 
-Investiga a fondo el set aprobado según `../../motor/deep-research.md`. Cuando un criterio o una afirmación necesite papers, activa doime en respaldo (`../doime/SKILL.md`). En paralelo, asigna al usuario sus tareas de primera mano (`../../motor/evidencia.md`, "Primera mano") con sus guías.
+Investiga a fondo el set aprobado con el deep research de discoverme. Cuando un criterio o una afirmación necesite papers, activa doime en respaldo (`../doime/SKILL.md`). En paralelo, asigna al usuario sus tareas de primera mano (`../../motor/evidencia.md`, "Primera mano") con sus guías.
 
 **Terminado cuando:** cada alternativa en profundidad tiene evidencia fechada y etiquetada en el registro, cada URL citada fue reabierta y respalda lo atribuido, y las tareas de primera mano figuran como hechas o pendientes.
 
@@ -65,7 +65,7 @@ Arma los perfiles con `references/analisis.md`. Presenta como punto de control l
 
 ### 5. Síntesis
 
-Sigue `references/sintesis.md`, pasa tus propuestas por la segunda mirada (`../../motor/segunda-mirada.md`) y preséntalas como punto de control, con los desafíos del revisor: el usuario elige.
+Sigue `references/sintesis.md`, pasa tus propuestas por la segunda mirada de discoverme y preséntalas como punto de control, con los desafíos del revisor: el usuario elige.
 
 **Terminado cuando:** el revisor desafió las propuestas; las convenciones de la categoría están contrastadas con los primeros principios; cada ítem comparado tiene postura, razón y evidencia; el steelman de la opción descartada está escrito; el usuario eligió la paradoja central; pasaron las pruebas de cierre; y la vigilancia tiene tripwires.
 
@@ -73,7 +73,7 @@ Sigue `references/sintesis.md`, pasa tus propuestas por la segunda mirada (`../.
 
 Redáctalo con `references/plantillas/informe.md` y las decisiones del usuario, y pásalo por la segunda mirada antes de mostrarlo. El **informe madre** es siempre el entregable principal; todo lo demás deriva de él.
 
-**Terminado cuando:** el informe vigente está guardado según `../../motor/guardado.md`, la versión anterior (si existe) está en `versiones/`, y pasó el control de calidad de la plantilla y la segunda mirada sin bloqueantes. Al cerrar, ofrece los derivados.
+**Terminado cuando:** el informe vigente está guardado según `../../motor/entrega.md`, la versión anterior (si existe) está en `versiones/`, y pasó el control de calidad de la plantilla y la segunda mirada sin bloqueantes. Al cerrar, ofrece los derivados.
 
 ## Actualizar
 
@@ -93,7 +93,7 @@ Salen siempre del informe vigente y declaran de qué versión salen.
 - **Ejecutiva** → con `references/plantillas/ejecutiva.md`.
 - **Presentación HTML**, completa o ejecutiva → con `references/presentaciones.md`.
 
-**Terminado cuando:** el derivado está guardado según `../../motor/guardado.md` y declara su versión de origen.
+**Terminado cuando:** el derivado está guardado según `../../motor/entrega.md` y declara su versión de origen.
 
 ## Guardarraíles
 

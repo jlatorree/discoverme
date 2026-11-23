@@ -25,7 +25,7 @@ Desafíalas como lo haría un colega exigente:
 ## Informe
 
 - Pasa el control de calidad de su plantilla, punto por punto, con un veredicto para cada uno.
-- Revisa la redacción con `${CLAUDE_PLUGIN_ROOT}/motor/redaccion.md`.
+- Revisa la redacción con la sección Redacción de `${CLAUDE_PLUGIN_ROOT}/motor/entrega.md`.
 - Elige las 5 afirmaciones que más pesan en la conclusión y sigue cada cita hasta su entrada del registro o su ficha. De ellas, reabre al menos 3 fuentes (URL o DOI) y confirma que dicen lo atribuido.
 - Confirma que el mensaje principal se sigue de los hallazgos.
 - En un informe integrado, compáralo con la estructura aprobada: cada sección está y dice lo que la estructura anunciaba.

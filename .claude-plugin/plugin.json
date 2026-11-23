@@ -1,6 +1,6 @@
 {
   "name": "discoverme",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Investigación estratégica co-creada. discoverme conduce el encargo como investigador y activa el método que pide: benchme (benchmarks que deciden qué igualar, de qué diferenciarse, qué vigilar y qué ignorar) o doime (revisiones de literatura con papers verificados y doble cita). Pensado para sumar métodos. Solo acceso público, sin login. Compatible con brainme.",
   "author": {
     "name": "Jonathan Latorre",

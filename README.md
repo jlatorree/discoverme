@@ -36,10 +36,10 @@ Para una investigación completa, pon la sesión en esfuerzo Extra: la síntesis
 
 ```
 Tú ⇄ discoverme (la sesión: el investigador)
-        ├─ activa un método: benchme, doime
+        ├─ activa un método: benchme, doime o el informe integrado
         ├─ reparte el trabajo de campo: buscadores y lectores, en paralelo
         ├─ pasa lo que te muestra por un revisor: propuestas de síntesis e informes
-        └─ sigue el motor: evidencia, captura web, deep research, segunda mirada, redacción, guardado
+        └─ sigue el motor: evidencia y fuentes; redacción y guardado
 ```
 
 - **discoverme** conversa contigo, planifica, reparte, verifica, sintetiza y redacta. Se detiene en cada punto de control para que decidas.
@@ -85,22 +85,21 @@ discoverme solo usa acceso público: nada que requiera tu sesión ni cuentas o A
 
 ### Herramientas opcionales
 
-Funciona con la búsqueda y la lectura web de Claude. Con muchas fuentes rinde mejor con estas, que discoverme revisa y te ofrece instalar:
+discoverme funciona solo con la búsqueda y la lectura web de Claude, y guarda cada página con `curl`. Si tienes instaladas estas herramientas, las usa con las mismas reglas:
 
-- [Crawl4AI](https://github.com/unclecode/crawl4ai): páginas como markdown limpio y extracción estructurada sin modelo.
-- [Agent Reach](https://github.com/Panniantong/Agent-Reach): YouTube (búsqueda y subtítulos) y búsqueda web alternativa.
-- [Playwright MCP](https://github.com/microsoft/playwright-mcp): recorrer flujos públicos y guardar capturas.
+- [Crawl4AI](https://github.com/unclecode/crawl4ai): páginas como markdown limpio. Instalación (requiere `uv`): `uv tool install crawl4ai --python 3.12 && crawl4ai-setup`.
+- [Agent Reach](https://github.com/Panniantong/Agent-Reach): YouTube y búsqueda web alternativa; discoverme usa solo sus canales `web` y `youtube`. Instalación (requiere `uv`): `uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip && agent-reach setup`.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp): recorrer flujos públicos (cotizar, simular) hasta antes de un dato personal, con una captura por paso. Instalación (requiere Node): `claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --isolated --browser chromium --output-dir /tmp/playwright-mcp` y `npx -y playwright install chromium`; después, reinicia la sesión.
 
 ## Dónde guarda
 
-- **Sin brainme:** todo en `investigacion/`, con un `indice.md` y un archivo por encargo para retomarlo, una carpeta por benchmark y por revisión de literatura, informes integrados, fichas de papers compartidas y las capturas web.
-- **Con [brainme](https://github.com/jlatorree/brainme):** discoverme escribe en las carpetas de brainme con sus tipos de nota, siguiendo la forma de las notas que ya tiene el proyecto. No invoca a brainme: al terminar te dice qué guardó y te sugiere pedirle a brainme que sincronice.
+Todo en una carpeta `investigacion/`: un archivo por encargo para retomarlo, una carpeta por benchmark, por revisión de literatura y por informe integrado, las fichas de papers y las páginas guardadas. A la vista queda solo la versión vigente; las anteriores, en `versiones/`.
 
-En ambos casos, a la vista queda solo la versión vigente y las anteriores en `versiones/`.
+**Con [brainme](https://github.com/jlatorree/brainme):** la carpeta va en `_taller/investigacion/`, que brainme deja donde está. discoverme no escribe en las notas de brainme: al terminar te sugiere pedirle a brainme que guarde el informe en el proyecto, y brainme lo archiva a su manera. Así cada uno hace lo suyo, y un cambio en brainme no afecta a discoverme.
 
 ## Sumar un método
 
-Un método nuevo es un skill en `skills/<método>/`, con `disable-model-invocation: true` para que la entrada sea siempre discoverme, y una fila en la tabla de métodos de `skills/discoverme/SKILL.md`. El skill define sus ramas, sus fases con su "terminado cuando" y sus puntos de control, su plantilla de entrega y sus guardarraíles propios; lo común (encargo, equipo, evidencia, redacción y guardado) ya lo ponen discoverme y `motor/`. Si guarda algo nuevo, suma su carpeta en `motor/guardado.md`.
+Un método nuevo es un skill en `skills/<método>/`, con `disable-model-invocation: true` para que la entrada sea siempre discoverme, y una fila en la tabla de métodos de `skills/discoverme/SKILL.md`. El skill define sus ramas, sus fases con su "terminado cuando" y sus puntos de control, su plantilla de entrega y sus guardarraíles propios; lo común (encargo, equipo, deep research, segunda mirada, evidencia, redacción y guardado) ya lo ponen discoverme y `motor/`. Si guarda algo nuevo, suma su carpeta en `motor/entrega.md`.
 
 ## Fuentes
 

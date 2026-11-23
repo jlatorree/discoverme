@@ -28,6 +28,6 @@ Pásale estas respuestas para que no las vuelva a preguntar:
 
 ## 3. Guarda
 
-Guarda según `../../../motor/guardado.md`, con la versión del informe de origen en la ficha o al inicio del archivo.
+Guarda según `../../../motor/entrega.md`, con la versión del informe de origen en la ficha o al inicio del archivo.
 
 frontend-slides produce decks 16:9. Si el usuario quiere el informe completo como página web con scroll, invoca el skill **frontend-design** con el informe vigente, el mismo design.md o estilo, y las mismas reglas del benchmark. Si frontend-design no está en la lista de skills, ofrece instalarlo con `claude plugin install frontend-design@claude-plugins-official`.
