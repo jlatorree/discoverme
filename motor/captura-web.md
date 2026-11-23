@@ -18,7 +18,7 @@ Lo hace la sesión, que habla con el usuario. Revisa qué hay disponible y díse
 
 - Crawl4AI: `command -v crwl`
 - Agent Reach: `command -v agent-reach`
-- Playwright: herramientas `mcp__playwright__*` en la sesión
+- Playwright: herramientas `mcp__playwright__*` en la sesión, y que `https://example.com` abra. Si no abre, el mensaje dice qué falta (casi siempre, el navegador): es una instalación más que ofrecer.
 
 Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuario. Sin ellas, el trabajo sigue con la búsqueda y la lectura web propias de Claude, y las páginas se guardan con `curl`.
 
@@ -28,7 +28,7 @@ Si falta alguna, ofrece instalarla (comandos al final) y espera el sí del usuar
 |---|---|---|
 | Páginas de cada alternativa: oferta, planes, precios, preguntas frecuentes, términos | Crawl4AI: `crwl <url> -o md-fit -O <archivo>`; varias páginas de un sitio: `--deep-crawl bfs --max-pages <n>` | `curl -sL <url> -o <archivo>.html` para guardarla, y lectura web |
 | Los mismos datos en muchos sitios (planes, precios, coberturas) | Crawl4AI con esquema, sin modelo: `crwl <url> -e extraccion.yml -s esquema.json -o json` | Un `discoverme:lector` lee los markdown y llena la tabla |
-| Flujos (cotizar, simular, comparar) | Playwright (aislado): recorre el flujo y guarda capturas | Tarea de primera mano del usuario |
+| Flujos (cotizar, simular, comparar) | Playwright (ver "Flujos con Playwright") | Tarea de primera mano del usuario |
 | Videos (reseñas, anuncios, demostraciones) | Agent Reach: `agent-reach youtube search <consulta>`, `agent-reach youtube subtitle <url>` | — |
 | Búsqueda o lectura cuando la propia rinde poco | `agent-reach web search <consulta>`, `agent-reach web read <url>` | — |
 | Historia de precios y mensajes | Wayback Machine: `https://web.archive.org/cdx/search/cdx?url=<url>&output=json` y `https://web.archive.org/web/<AAAAMMDD>/<url>` | — |
@@ -56,6 +56,16 @@ params:
 
 Con muchas páginas, Crawl4AI no gasta tokens al rastrear, un `lector` lee los markdown, y tú verificas al menos un dato por fuente contra el original.
 
+## Flujos con Playwright
+
+El navegador es uno solo para toda la sesión: lo usa quien conversa con el usuario, un flujo a la vez. Los buscadores le devuelven los flujos que convenga recorrer.
+
+- **Hasta dónde:** se avanza con datos que no identifican a nadie (un monto, un plazo, un modelo de auto). El flujo se detiene antes de pedir un dato personal (nombre, documento, placa, celular, correo), una cuenta, un pago, un captcha o un envío; lo que sigue es tarea de primera mano del usuario. Las cookies opcionales se rechazan, desde su configuración si no hay botón para rechazarlas; si no se puede, el aviso queda abierto.
+- **Qué queda:** por cada paso, una captura (`<sitio>/<AAAA-MM-DD>/flujo-<nombre>-<n>.png`) y una fila con qué muestra, qué pide y en qué se detuvo. La captura es evidencia de uso directo.
+- **Dónde:** pasa la ruta completa de la captura en `filename`. Al terminar, cierra el navegador; si quedó una carpeta `.playwright-mcp/` en el proyecto, son archivos temporales: muévela a la papelera o dile al usuario que puede borrarla.
+- **Cuánto buscar:** un flujo se busca en hasta 3 sitios. Si en ninguno aparece abierto, pasa a tarea de primera mano.
+- **Si Playwright no arranca o el sitio lo bloquea**, el flujo pasa a tarea de primera mano. El navegador se maneja solo con sus herramientas `mcp__playwright__*`.
+
 ## Copias de respaldo
 
 Cada página que sustenta evidencia se guarda en la carpeta de capturas (`guardado.md`), dentro de `<sitio>/<AAAA-MM-DD>/`: markdown con Crawl4AI o el HTML con `curl`. Las capturas de flujos van en la misma carpeta. Así cada dato tiene respaldo aunque la página cambie.
@@ -74,5 +84,5 @@ Pide el sí del usuario antes de cada una.
 
 - **Crawl4AI** (requiere `uv`): `uv tool install crawl4ai --python 3.12 && crawl4ai-setup`. Descarga un navegador. Con `CRAWL4AI_NO_CLOUD_NOTICE=1` se oculta su aviso de la nube.
 - **Agent Reach** (requiere `uv`): `uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip && agent-reach setup`. El paquete de PyPI con el mismo nombre es otro proyecto. Agrega solo canales sin login.
-- **Playwright** (requiere Node): `claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --isolated`. Con `--isolated` no guarda sesiones. Hay que reiniciar la sesión.
+- **Playwright** (requiere Node): `claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --isolated --browser chromium --output-dir /tmp/playwright-mcp`, y el navegador con `npx -y playwright install chromium`. Con `--isolated` no guarda sesiones; con `--browser chromium` no necesita Google Chrome. Hay que reiniciar la sesión. Si ya estaba instalado sin `--browser chromium`, antes: `claude mcp remove playwright -s user`.
 - Si falta `uv`: `brew install uv`.
